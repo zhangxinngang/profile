@@ -1,0 +1,31 @@
+package profile;
+
+import "github.com/gogo/protobuf/gogoproto/gogo.proto";
+// 某些对象的序列化
+
+
+option (gogoproto.marshaler_all) = true;
+option (gogoproto.sizer_all) = true;
+option (gogoproto.unmarshaler_all) = true;
+
+
+message ProtoUser{
+  required uint64 uin         = 1 [(gogoproto.nullable) = false] ;
+  required string accountId   = 2 [(gogoproto.nullable) = false] ;
+  required string accountName = 3 [(gogoproto.nullable) = false] ;
+  required int32  gender      = 4 [(gogoproto.nullable) = false] ;
+  required uint64 platform    = 5 [(gogoproto.nullable) = false] ;
+  required uint64 channel     = 6 [(gogoproto.nullable) = false] ;
+  required uint64 server      = 7 [(gogoproto.nullable) = false] ;
+  required string uuid        = 8 [(gogoproto.nullable) = false] ;
+  required int32  os          = 9 [(gogoproto.nullable) = false] ;
+  required int32  osVersion   =10 [(gogoproto.nullable) = false] ;
+  required string deviceModel =11 [(gogoproto.nullable) = false] ;
+  required int64 CreateTime   =12 [(gogoproto.nullable) = false] ;
+  required int32 Vip          =13 [(gogoproto.nullable) = false] ;
+  required int32 Level        =14 [(gogoproto.nullable) = false] ;
+}
+
+
+
+
